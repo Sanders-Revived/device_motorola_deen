@@ -420,7 +420,7 @@ PRODUCT_PACKAGES += \
     libgui_shim_vendor \
     libcutils_shim \
     libmemset_shim \
-    libqsap_shim
+    libqsap_sdk
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
