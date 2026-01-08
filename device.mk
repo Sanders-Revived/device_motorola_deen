@@ -308,7 +308,13 @@ PRODUCT_PACKAGES += \
 
 # Partitions
 PRODUCT_PACKAGES += \
-    dsp_symlink \
+    dsp_symlink
+
+PRODUCT_PACKAGES += \
+    vendor_bt_firmware_mountpoint \
+    vendor_dsp_mountpoint \
+    vendor_firmware_mnt_mountpoint \
+    vendor_fsg_mountpoint
 
 # Perf
 PRODUCT_COPY_FILES += \
