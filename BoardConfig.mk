@@ -141,12 +141,9 @@ BOARD_KERNEL_OFFSET := 0x00008000
 BOARD_KERNEL_PAGESIZE :=  2048
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 TARGET_KERNEL_ARCH := arm64
-TARGET_KERNEL_CONFIG := deen_defconfig
-TARGET_KERNEL_SOURCE := kernel/motorola/deen
-TARGET_KERNEL_VERSION := 4.9
-TARGET_KERNEL_ADDITIONAL_FLAGS := \
-    DTC=$(shell pwd)/prebuilts/misc/$(HOST_OS)-x86/dtc/dtc \
-    MKDTIMG=$(shell pwd)/prebuilts/misc/$(HOST_OS)-x86/libufdt/mkdtimg
+TARGET_KERNEL_CONFIG := vendor/deen_defconfig
+TARGET_KERNEL_SOURCE := kernel/motorola/msm8953
+TARGET_KERNEL_VERSION := 4.19
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
