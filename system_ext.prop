@@ -32,4 +32,5 @@ persist.vendor.ims.dropset_feature=0
 persist.vendor.ims.vt.enableadb=3
 
 # Recovery
-ro.recovery.ui.blank_unblank_on_init=true
+ro.recovery.ui.blank_unblank_on_init=false
+ro.recovery.ui.skip_fbdev_powerdown=true
