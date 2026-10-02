@@ -1,9 +1,11 @@
-#Blaine add seosors-hal input group for AP senosr,it will override android.hardware.sensors@1.0-service.rc
+# Keep the input group for Motorola AP sensors and declare the HIDL interface.
 
 service vendor.sensors-hal-1-0 /vendor/bin/hw/android.hardware.sensors@1.0-service
+    override
+    interface android.hardware.sensors@1.0::ISensors default
     class hal
     user system
-    group system input uhid wakelock
+    group system input uhid wakelock context_hub
     capabilities BLOCK_SUSPEND
     rlimit rtprio 10 10
 
