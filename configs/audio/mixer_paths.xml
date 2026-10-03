@@ -31,11 +31,11 @@
 	<ctl name="IIR1 INP2 Volume" value="84" />
 	<ctl name="IIR1 INP3 Volume" value="84" />
 	<ctl name="IIR1 INP4 Volume" value="84" />
-	<ctl name="ADC1 Volume" value="15" />
-	<ctl name="ADC2 Volume" value="15" />
-	<ctl name="ADC3 Volume" value="15" />
-	<ctl name="DEC1 Volume" value="90" />
-	<ctl name="DEC2 Volume" value="90" />
+	<ctl name="ADC1 Volume" value="6" />
+	<ctl name="ADC2 Volume" value="6" />
+	<ctl name="ADC3 Volume" value="6" />
+	<ctl name="DEC1 Volume" value="84" />
+	<ctl name="DEC2 Volume" value="84" />
 	<ctl name="DEC2 MUX" value="ZERO" />
 	<ctl name="DEC1 MUX" value="ZERO" />
 	<ctl name="ADC2 MUX" value="ZERO" />
@@ -860,8 +860,9 @@
 	</path>
 
 	<path name="handset-mic">
-		<ctl name="ADC1_INP1 Switch" value="1" />
-		<ctl name="DEC1 MUX" value="ADC1" />
+		<path name="adc1" />
+		<ctl name="ADC1 Volume" value="6" />
+		<ctl name="DEC1 Volume" value="84" />
 		<ctl name="IIR1 INP1 MUX" value="DEC1" />
 	</path>
 
@@ -911,17 +912,19 @@
 
 	<path name="mic1">
 		<path name="adc1" />
-		<ctl name="ADC1 Volume" value="15" />
-		<ctl name="ADC2 Volume" value="15" />
-		<ctl name="ADC3 Volume" value="15" />
+		<ctl name="ADC1 Volume" value="6" />
+		<ctl name="ADC2 Volume" value="6" />
+		<ctl name="ADC3 Volume" value="6" />
+		<ctl name="DEC1 Volume" value="84" />
 	</path>
 
 	<path name="mic2">
 		<ctl name="DEC1 MUX" value="ADC3" />
 		<ctl name="ADC2 MUX" value="INP3" />
-		<ctl name="ADC1 Volume" value="15" />
-		<ctl name="ADC2 Volume" value="15" />
-		<ctl name="ADC3 Volume" value="15" />
+		<ctl name="ADC1 Volume" value="6" />
+		<ctl name="ADC2 Volume" value="6" />
+		<ctl name="ADC3 Volume" value="6" />
+		<ctl name="DEC1 Volume" value="84" />
 	</path>
 
 	<path name="voice-handset">
@@ -970,8 +973,9 @@
 	</path>
 
 	<path name="camcorder-mic">
-		<ctl name="ADC1_INP1 Switch" value="1" />
-		<ctl name="DEC1 MUX" value="ADC1" />
+		<path name="adc1" />
+		<ctl name="ADC1 Volume" value="6" />
+		<ctl name="DEC1 Volume" value="84" />
 		<ctl name="IIR1 INP1 MUX" value="DEC1" />
 	</path>
 
