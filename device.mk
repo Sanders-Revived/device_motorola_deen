@@ -385,6 +385,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libjson
 
+# RFS MSM MPSS symlinks
+PRODUCT_PACKAGES += \
+    rfs_msm_mpss_readonly_vendor_fsg_symlink
+
 # Radio
 PRODUCT_PACKAGES += \
     android.hardware.radio@1.4.vendor \
