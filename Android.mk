@@ -43,14 +43,6 @@ $(FSG_MOUNT_POINT):
 	@echo "Creating $(FSG_MOUNT_POINT)"
 	@mkdir -p $(TARGET_OUT_VENDOR)/fsg
 
-DSP_SYMLINK := $(TARGET_OUT_VENDOR)/lib/dsp
-$(DSP_SYMLINK): $(LOCAL_INSTALLED_MODULE)
-	@echo "Creating DSP folder symlink: $@"
-	@rm -rf $@
-	$(hide) ln -sf /vendor/dsp $@
-
-ALL_DEFAULT_INSTALLED_MODULES += $(DSP_SYMLINK)
-
 IMS_LIBS := libimscamera_jni.so libimsmedia_jni.so
 IMS_SYMLINKS := $(addprefix $(TARGET_OUT_PRODUCT_APPS_PRIVILEGED)/ims/lib/arm64/,$(notdir $(IMS_LIBS)))
 $(IMS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)

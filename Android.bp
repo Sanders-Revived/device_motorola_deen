@@ -1,3 +1,10 @@
 soong_namespace {
     imports: ["hardware/qcom/bootctrl"],
 }
+
+install_symlink {
+    name: "dsp_symlink",
+    vendor: true,
+    installed_location: "lib/dsp",
+    symlink_target: "/vendor/dsp",
+}
