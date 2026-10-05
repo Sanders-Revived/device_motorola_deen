@@ -67,6 +67,9 @@ PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml
 
+# Add common definitions for Qualcomm
+ $(call inherit-product, hardware/qcom-caf/common/common.mk)
+
 TARGET_EXCLUDES_AUDIOFX := true
 
 # Additional native libraries
