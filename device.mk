@@ -19,7 +19,6 @@ DEVICE_PACKAGE_OVERLAYS += \
 PRODUCT_PACKAGES += \
     AvoidAppsInCutoutOverlay \
     NoCutoutOverlay \
-    TetheringConfigOverlay \
     WifiOverlay
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
