@@ -44,6 +44,6 @@
         <value>123.085</value>
     </array>
     <item name="cpu.awake">2</item>
-    <item name="cpu.idle">4</item>
+    <item name="cpu.suspend">4</item>
     <item name="battery.capacity">3000</item>
 </device>
