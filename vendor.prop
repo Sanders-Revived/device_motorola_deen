@@ -40,6 +40,7 @@ vendor.voice.path.for.pcm.voip=false
 
 # Bluetooth
 vendor.qcom.bluetooth.soc=pronto
+bluetooth.device.default_name=Motorola One
 
 # Camera
 vendor.camera.aux.packageblacklist=com.discord

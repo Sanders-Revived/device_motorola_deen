@@ -80,7 +80,6 @@ MM_AUDIO_ENABLED_FTM := true
 MM_AUDIO_ENABLED_SAFX := true
 
 # Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/configs/bluetooth
 BOARD_HAVE_BLUETOOTH_QCOM := true
 
 # Bootloader / Platform
