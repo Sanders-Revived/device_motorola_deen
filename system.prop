@@ -68,10 +68,6 @@ persist.vendor.dpm.feature=0
 ril.subscription.types=NV,RUIM
 telephony.lteOnCdmaDevice=1
 
-# Skia
-# (b/183612348): Enable skia reduceOpsTaskSplitting
-renderthread.skia.reduceopstasksplitting=true
-
 # Time
 persist.timed.enable=true
 
