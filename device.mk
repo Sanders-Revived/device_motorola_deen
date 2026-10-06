@@ -207,7 +207,9 @@ PRODUCT_PACKAGES += \
 # IMS
 PRODUCT_PACKAGES += \
     ims-ext-common \
-    ims_ext_common.xml
+    ims_ext_common.xml \
+    ims_libimscamera_jni_symlink \
+    ims_libimsmedia_jni_symlink
 
 # HWBinder
 PRODUCT_PACKAGES += \
