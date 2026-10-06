@@ -9,8 +9,6 @@ DEVICE_PATH := device/motorola/deen
 BOARD_VENDOR := motorola
 
 # A/B updater
-AB_OTA_UPDATER := true
-
 AB_OTA_PARTITIONS += \
     boot \
     system \
