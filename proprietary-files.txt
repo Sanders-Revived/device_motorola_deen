@@ -628,7 +628,7 @@ vendor/lib64/libmm-hdcpmgr.so|f0773c8b9c751dc4e16a112b34c70a7611240b60
 
 # Graphics (Postprocessing) - from LA.UM.8.6.2.r1-08600-89xx.0
 etc/permissions/com.qti.snapdragon.sdk.display.xml|0bff16d681e75f203c1e11ff33afba82490e49b3
-framework/com.qti.snapdragon.sdk.display.jar|495d45dd84a61e873a3d1176ab7741826e60d7f1
+system/framework/com.qti.snapdragon.sdk.display.jar|495d45dd84a61e873a3d1176ab7741826e60d7f1
 vendor/bin/hw/vendor.display.color@1.0-service|e8c561e3a169c3007b117515f2946f23a195a5e5
 vendor/bin/hw/vendor.qti.hardware.qdutils_disp@1.0-service-qti|214d876835224bbb723c9d4dd4911ac2aee6ca34
 vendor/bin/mm-pp-dpps|3f84359a790a437d88a760f45e62f41fdaeb1a51
