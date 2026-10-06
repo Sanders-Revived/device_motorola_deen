@@ -411,6 +411,9 @@ PRODUCT_COPY_FILES += \
 
 TARGET_RECOVERY_DENSITY := xhdpi
 
+PRODUCT_PACKAGES += \
+    libinit_deen.recovery
+
 # Seccomp
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/seccomp/mediacodec-seccomp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy \
