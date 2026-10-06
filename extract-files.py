@@ -26,6 +26,31 @@ namespace_imports = [
     'vendor/qcom/opensource/dataservices',
 ]
 
+ims_partition_libs = (
+    'com.qualcomm.qti.imscmservice@1.0',
+    'com.qualcomm.qti.imscmservice@2.0',
+    'com.qualcomm.qti.imscmservice@2.1',
+    'com.qualcomm.qti.imscmservice@2.2',
+    'com.qualcomm.qti.uceservice@2.0',
+    'com.qualcomm.qti.uceservice@2.1',
+    'lib-imsvtcore',
+    'vendor.qti.ims.callinfo@1.0',
+    'vendor.qti.ims.rcsconfig@1.0',
+    'vendor.qti.imsrtpservice@2.0',
+    'vendor.qti.imsrtpservice@2.1',
+)
+
+
+def lib_fixup_vendor_ims_suffix(lib: str, partition: str) -> str:
+    return f'{lib}_vendor' if partition == 'vendor' else lib
+
+
+lib_fixups: lib_fixups_user_type = {
+    **lib_fixups,
+    ims_partition_libs: lib_fixup_vendor_ims_suffix,
+}
+
+
 blob_fixups: blob_fixups_user_type = {
     'vendor/lib/hw/audio.primary.msm8953.so': blob_fixup()
         .replace_needed('libcutils.so', 'libprocessgroup.so'),
