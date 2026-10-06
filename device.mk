@@ -111,12 +111,7 @@ PRODUCT_PACKAGES += \
     libbson.vendor \
     libxml2 \
     libwui \
-    vendor.qti.hardware.camera.device@1.0:64 \
-    GoogleCameraGoPrebuilt
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/permissions/privapp-permissions-gcam.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-gcam.xml
-
+    vendor.qti.hardware.camera.device@1.0:64
 # Cgroup and task_profiles
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/cgroups.json:$(TARGET_COPY_OUT_VENDOR)/etc/cgroups.json \
@@ -367,11 +362,6 @@ PRODUCT_PACKAGES += \
 # Powerhint
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/perf/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml
-
-# Prebuilt packages
-PRODUCT_PACKAGES += \
-    SimpleGallery \
-    ViaBrowser
 
 # QCOM
 PRODUCT_PACKAGES += \
