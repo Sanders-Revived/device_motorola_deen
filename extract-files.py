@@ -53,14 +53,6 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libcutils_shim.so'),
     'vendor/bin/charge_only_mode': blob_fixup()
         .add_needed('libmemset_shim.so'),
-    (
-        'vendor/lib/mediadrm/libwvhidl.so',
-        'vendor/mediadrm/lib64/libwvhidl.so',
-    ): blob_fixup()
-        .replace_needed(
-            'libprotobuf-cpp-lite.so',
-            'libprotobuf-cpp-lite-v29.so',
-        ),
 }  # fmt: skip
 
 
