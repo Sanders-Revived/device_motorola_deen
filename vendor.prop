@@ -72,9 +72,6 @@ debug.hwui.use_buffer_age=false
 debug.renderengine.backend=threaded
 debug.sf.disable_client_composition_cache=1
 
-# DRM
-drm.service.enabled=true
-
 # Factory reset partition
 ro.frp.pst=/dev/block/platform/soc/7824900.sdhci/by-name/frp
 
