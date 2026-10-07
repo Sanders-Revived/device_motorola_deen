@@ -146,9 +146,8 @@ PRODUCT_PACKAGES += \
 
 # DRM
 PRODUCT_PACKAGES += \
-    android.hardware.drm@1.0-impl \
-    android.hardware.drm@1.0-service \
-    android.hardware.drm@1.4-service.clearkey
+    android.hardware.drm@1.4.vendor \
+    android.hardware.drm-service.clearkey
 
 # Fingerprint
 PRODUCT_PACKAGES += \
@@ -472,7 +471,6 @@ PRODUCT_COPY_FILES += \
 
 # VNDK
 # Update this list with what each blob is actually for
-# libicuuc: vendor.qti.hardware.qteeconnector@1.0-impl
 # libstdc++: camera.msm8953
 PRODUCT_PACKAGES += \
     libstdc++.vendor \
