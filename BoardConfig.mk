@@ -116,7 +116,6 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     vendor/lineage/config/device_framework_matrix.xml
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_deen
 
 # Kernel
 BOARD_BOOT_HEADER_VERSION := 1
