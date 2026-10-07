@@ -107,7 +107,6 @@ ro.oem_unlock_supported=1
 
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
-ro.vendor.perf.scroll_opt=true
 
 # Radio
 persist.vendor.radio.lte_vrte_ltd=1
