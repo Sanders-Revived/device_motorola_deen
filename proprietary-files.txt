@@ -640,16 +640,12 @@ vendor/lib64/libgcs-osal.so
 vendor/lib64/libgcs.so
 vendor/lib64/vendor.qti.voiceprint@1.0.so
 
-# Media - from deen_sprout QPKS30.54-22-27
-vendor/lib/libgpustats.so|75fc8f58b071f3c27d708010e1b40eafba091a14
-vendor/lib/libI420colorconvert.so|0dfd4d0e49f4250e98e781483048a296a679e05e
-vendor/lib/libmm-color-convertor.so|7c74d36d42dc79fc58afe0f4323b76cc1297d36e
-vendor/lib/libmmosal_proprietary.so|d13484ae06274357ae18036f4473cb361881dd93
-vendor/lib/libvqzip.so|24e5eb30e5a2cdb544c8688d81d7cc75a1d85eaf
-vendor/lib64/libgpustats.so|a899ae72983277442cdacf8f43271986c91ce710
-vendor/lib64/libI420colorconvert.so|296987a0fc833ead9db3640ef2de42d7126782fb
-vendor/lib64/libmm-color-convertor.so|d3539eb5a6a986f8ba81bac9cbf7b34872b12f1a
-vendor/lib64/libmmosal_proprietary.so|5c15991df1c75971bcc91ba3d19a8e1ece2e951d
+# Media - from LA.UM.9.6.2.r1-04200-89xx.0
+system_ext/lib64/libavenhancements.so;DISABLE_CHECKELF;DISABLE_DEPS|642292eeef580a33fec54b4505c1b6cecffde5a3
+vendor/etc/seccomp_policy/mediacodec.policy|3dec19ed56099a36b44cc72ad04ab23b9cc22ace
+vendor/etc/seccomp_policy/mediaextractor.policy|4234a844e9b1aef37397c8cfbd19566966ecd622
+vendor/lib64/libmmosal.so|e9fdb48163e92b089cea0c397723a8416436c272
+vendor/lib64/libvpplibrary.so|30e8e7cf1495fb88162beeb65e6273f28563b43b
 
 # NFC
 vendor/lib64/libpn553_fw.so

@@ -289,8 +289,11 @@ PRODUCT_COPY_FILES += \
 
 # OMX
 PRODUCT_PACKAGES += \
+    android.hardware.media.omx@1.0-service \
     libc2dcolorconvert \
+    libmm-omxcore \
     libOmxCore \
+    libhidlbase-v32 \
     libOmxVdec \
     libOmxVenc \
     libstagefrighthw
@@ -389,14 +392,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/init.mmi.usb.rc:root/init.recovery.qcom.usb.rc
 
 TARGET_RECOVERY_DENSITY := xhdpi
-
-PRODUCT_PACKAGES += \
-    libinit_deen.recovery
-
-# Seccomp
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/seccomp/mediacodec-seccomp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy \
-    $(LOCAL_PATH)/configs/seccomp/mediaextractor-seccomp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaextractor.policy
 
 # Sensors
 PRODUCT_PACKAGES += \
