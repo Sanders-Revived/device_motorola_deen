@@ -218,6 +218,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     fstab.qcom \
+    fstab.qcom.ramdisk \
     init.hidl.sensor.rc \
     init.mmi.chipset.rc \
     init.mmi.overlay.rc \
