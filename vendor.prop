@@ -106,6 +106,9 @@ ro.oem_unlock_supported=1
 ro.vendor.extension_library=libqti-perfd-client.so
 
 # Radio
+persist.radio.multisim.config=dsds
+persist.vendor.data.iwlan.enable=true
+persist.vendor.data.profile_update=true
 persist.vendor.radio.lte_vrte_ltd=1
 persist.vendor.radio.enable_temp_dds=true
 persist.vendor.lte.pco_mmi_legacy_mode=true
@@ -125,6 +128,7 @@ persist.vendor.radio.apm_sim_not_pwdn=1
 persist.vendor.radio.apn_delay=5000
 persist.vendor.radio.calls.on.ims=true
 persist.vendor.radio.custom_ecc=1
+persist.vendor.radio.enableadvancedscan=false
 persist.vendor.radio.data_con_rprt=true
 persist.vendor.radio.dfr_mode_set=1
 persist.vendor.radio.domain.ps=0
@@ -136,7 +140,6 @@ persist.vendor.radio.is_wps_enabled=true
 persist.vendor.radio.jbims=1
 persist.vendor.radio.msgtunnel.start=true
 persist.vendor.radio.mt_sms_ack=30
-persist.vendor.radio.mt_sms_ack=30
 persist.vendor.radio.no_wait_for_card=1
 persist.vendor.radio.oem_ind_to_both=0
 persist.vendor.radio.procedure_bytes=SKIP
@@ -147,15 +150,16 @@ persist.vendor.radio.sar_sensor=1
 persist.vendor.radio.sib16_support=1
 persist.vendor.radio.sw_mbn_update=1
 persist.vendor.sys.cnd.iwlan=1
+persist.vendor.dpmhalservice.enable=1
 ro.config.media_vol_steps=30
 ro.config.vc_call_vol_steps=9
 ro.telephony.call_ring.multiple=false
-ro.telephony.default_network=10,10
+ro.telephony.default_network=20,20
 ro.telephony.iwlan_operation_mode=legacy
 ro.vendor.build.vendorprefix=/vendor
-ro.vendor.telephony.default_network=10,10
+ro.vendor.telephony.default_network=20,20
 ro.vendor.use_data_netmgrd=true
-ro.telephony.use_old_mnc_mcc_format=true
+vendor.service.qti.ims.enabled=1
 
 # Sensors
 ro.hardware.sensors=deen
