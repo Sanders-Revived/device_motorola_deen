@@ -40,6 +40,8 @@ vendor.voice.path.for.pcm.voip=false
 
 # Bluetooth
 vendor.qcom.bluetooth.soc=pronto
+persist.vendor.bt.a2dp_offload_cap=sbc-aac-aptx-aptxhd-ldac
+persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aac-aptx-aptxhd-ldac
 bluetooth.device.default_name=Motorola One
 
 # Camera
