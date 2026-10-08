@@ -12,7 +12,7 @@ extract_utils.tools.DEFAULT_PATCHELF_VERSION = '0_9'
 
 from extract_utils.elf import file_needs_lib
 from extract_utils.fixups_blob import blob_fixup, blob_fixups_user_type
-from extract_utils.fixups_lib import lib_fixups, lib_fixups_user_type
+from extract_utils.fixups_lib import lib_fixups
 from extract_utils.main import ExtractUtils, ExtractUtilsModule
 from extract_utils.postprocess import PostprocessCtx
 from extract_utils.tools import patchelf_version_path_map
@@ -26,40 +26,9 @@ namespace_imports = [
     'vendor/qcom/opensource/dataservices',
 ]
 
-ims_partition_libs = (
-    'com.qualcomm.qti.imscmservice@1.0',
-    'com.qualcomm.qti.imscmservice@2.0',
-    'com.qualcomm.qti.imscmservice@2.1',
-    'com.qualcomm.qti.imscmservice@2.2',
-    'com.qualcomm.qti.uceservice@2.0',
-    'com.qualcomm.qti.uceservice@2.1',
-    'lib-imsvtcore',
-    'vendor.qti.ims.callinfo@1.0',
-    'vendor.qti.ims.rcsconfig@1.0',
-    'vendor.qti.imsrtpservice@2.0',
-    'vendor.qti.imsrtpservice@2.1',
-)
-
-
-def lib_fixup_vendor_ims_suffix(lib: str, partition: str) -> str:
-    return f'{lib}_vendor' if partition == 'vendor' else lib
-
-
-lib_fixups: lib_fixups_user_type = {
-    **lib_fixups,
-    ims_partition_libs: lib_fixup_vendor_ims_suffix,
-}
-
-
 blob_fixups: blob_fixups_user_type = {
     'vendor/lib/hw/audio.primary.msm8953.so': blob_fixup()
         .replace_needed('libcutils.so', 'libprocessgroup.so'),
-    (
-        'product/lib/lib-imscamera.so',
-        'product/lib/lib-imsvideocodec.so',
-        'product/lib64/lib-imscamera.so',
-    ): blob_fixup()
-        .add_needed('libgui_shim.so'),
     'vendor/lib/libmot_gpu_mapper.so': blob_fixup()
         .add_needed('libgui_shim_vendor.so'),
     'vendor/lib/libmmcamera2_pproc_modules.so': blob_fixup()
@@ -69,11 +38,6 @@ blob_fixups: blob_fixups_user_type = {
         ),
     'vendor/lib/libmmcamera_vstab_module.so': blob_fixup()
         .binary_regex_replace(b'libgui', b'libwui'),
-    (
-        'product/etc/permissions/vendor.qti.hardware.data.connection-V1.0-java.xml',
-        'product/etc/permissions/vendor.qti.hardware.data.connection-V1.1-java.xml',
-    ): blob_fixup()
-        .regex_replace('xml version="2.0"', 'xml version="1.0"'),
     'vendor/lib64/libril-qc-hal-qmi.so': blob_fixup()
         .add_needed('libcutils_shim.so'),
     'vendor/bin/charge_only_mode': blob_fixup()

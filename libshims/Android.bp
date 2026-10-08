@@ -1,0 +1,9 @@
+java_library {
+    name: "deen-telephony-stub",
+    installable: true,
+    provides_uses_lib: "deen-telephony-stub",
+    sdk_version: "system_current",
+    srcs: [
+        "TelephonyBaseUtilsStub.java",
+    ],
+}

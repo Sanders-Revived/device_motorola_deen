@@ -64,7 +64,7 @@ media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 # Radio
 DEVICE_PROVISIONED=1
 persist.vendor.cne.feature=1
-persist.vendor.dpm.feature=0
+persist.vendor.dpm.feature=1
 ril.subscription.types=NV,RUIM
 telephony.lteOnCdmaDevice=1
 

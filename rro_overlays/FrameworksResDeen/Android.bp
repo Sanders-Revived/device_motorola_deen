@@ -1,0 +1,6 @@
+runtime_resource_overlay {
+    name: "FrameworksResDeen",
+    theme: "FrameworksResDeen",
+    vendor: true,
+    aaptflags: ["--keep-raw-values"],
+}

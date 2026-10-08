@@ -106,6 +106,10 @@ service qcamerasvr /system/vendor/bin/mm-qcamera-daemon
     user camera
     group camera system inet input graphics
 
+# Stop the imported Qualcomm IMS RTP daemon cleanly during shutdown.
+on property:sys.shutdown.requested=*
+    stop vendor.ims_rtp_daemon
+
 on init
     write /dev/stune/foreground/schedtune.sched_boost_no_override 1
     write /dev/stune/top-app/schedtune.sched_boost_no_override 1

@@ -11,6 +11,15 @@
         <boolean name="show_apn_setting_cdma_bool" value="true" />
         <boolean name="world_phone_bool" value="true" />
         <boolean name="config_update_service_status" value="false"/>
+        <boolean name="rtt_auto_upgrade_bool" value="false" />
+        <boolean name="rtt_supported_for_vt_bool" value="false" />
+        <boolean name="rtt_upgrade_supported_bool" value="false" />
+        <boolean name="rtt_downgrade_supported_bool" value="false" />
+        <boolean name="ignore_rtt_mode_setting_bool" value="false" />
+        <boolean name="allow_hold_video_call_bool" value="true" />
+        <boolean name="carrier_allow_transfer_ims_call_bool" value="true" />
+        <boolean name="hide_lte_plus_data_icon_bool" value="false" />
+        <int name="lte_plus_threshold_bandwidth_khz_int" value="0" />
     </carrier_config>
     <carrier_config mcc="001" customerid="verizon">
         <boolean name="carrier_volte_provisioning_required_bool" value="true" />
