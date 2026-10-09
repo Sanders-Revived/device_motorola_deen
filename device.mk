@@ -269,9 +269,6 @@ PRODUCT_PACKAGES += \
     netutils-wrapper-1.0
 
 # NFC and Secure Element packages
-# The current Android 15 checkout has no UWB/ranging module for this target.
-PRODUCT_ENFORCE_PACKAGES_EXIST_ALLOW_LIST += com.android.ranging
-
 PRODUCT_PACKAGES += \
     android.hardware.nfc@1.1-service \
     android.hardware.secure_element@1.1-service-disabled \

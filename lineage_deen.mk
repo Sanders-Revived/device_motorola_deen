@@ -17,6 +17,10 @@ $(call inherit-product, vendor/lineage/config/lineage_audio.mk)
 # Inherit from device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
+# This target has no UWB/ranging hardware and the optional module is absent
+# from the current Android 15 source checkout.
+PRODUCT_PACKAGES := $(filter-out com.android.ranging,$(PRODUCT_PACKAGES))
+
 # Device Identifiers
 PRODUCT_BRAND := motorola
 PRODUCT_DEVICE := deen
