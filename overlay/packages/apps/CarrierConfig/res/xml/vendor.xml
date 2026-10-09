@@ -2695,4 +2695,161 @@
     <carrier_config device="deen">
         <boolean name="sim_lock_is_valid_sim_bool" value="true" />
     </carrier_config>
+    <carrier_config mcc="440" mnc="10">
+        <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_default_volte_switch_on_bool" value="true" />
+        <boolean name="enhanced_4g_lte_on_by_default_bool" value="true" />
+        <boolean name="editable_enhanced_4g_lte_bool" value="true" />
+        <boolean name="carrier_vt_available_bool" value="true" />
+        <boolean name="support_cdma_1x_voice_calls_bool" value="false" />
+        <boolean name="allow_emergency_numbers_in_call_log_bool" value="true" />
+        <boolean name="allow_hold_call_during_emergency_bool" value="false" />
+        <boolean name="hide_ims_apn_bool" value="true" />
+        <boolean name="hide_lte_plus_data_icon_bool" value="false" />
+        <boolean name="ignore_data_enabled_changed_for_video_calls" value="true" />
+        <boolean name="show_4g_for_lte_data_icon_bool" value="true" />
+        <int name="volte_replacement_rat_int" value="3" />
+        <string-array name="ims_reasoninfo_mapping_string_array" num="1">
+            <item value="332||510" />
+        </string-array>
+    </carrier_config>
+    <carrier_config mcc="440" mnc="11">
+        <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_default_volte_switch_on_bool" value="true" />
+        <boolean name="enhanced_4g_lte_on_by_default_bool" value="true" />
+        <boolean name="editable_enhanced_4g_lte_bool" value="true" />
+        <boolean name="support_cdma_1x_voice_calls_bool" value="false" />
+        <boolean name="enabledMMS" value="false" />
+    </carrier_config>
+    <carrier_config mcc="440" mnc="20">
+        <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_default_volte_switch_on_bool" value="true" />
+        <boolean name="enhanced_4g_lte_on_by_default_bool" value="true" />
+        <boolean name="editable_enhanced_4g_lte_bool" value="true" />
+        <boolean name="support_cdma_1x_voice_calls_bool" value="false" />
+        <boolean name="carrier_supports_ss_over_ut_bool" value="true" />
+        <boolean name="show_4g_for_lte_data_icon_bool" value="true" />
+        <boolean name="enabledMMS" value="true" />
+        <boolean name="ignore_data_enabled_changed_for_video_calls" value="true" />
+        <boolean name="call_barring_supports_password_change_bool" value="false" />
+        <boolean name="call_barring_supports_deactivate_all_bool" value="false" />
+        <int name="volte_replacement_rat_int" value="3" />
+        <int name="ims_dtmf_tone_delay_int" value="215" />
+    </carrier_config>
+    <carrier_config mcc="440" mnc="50">
+        <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_volte_provisioned_bool" value="true" />
+        <boolean name="carrier_default_volte_switch_on_bool" value="true" />
+        <boolean name="enhanced_4g_lte_on_by_default_bool" value="true" />
+        <boolean name="editable_enhanced_4g_lte_bool" value="true" />
+        <boolean name="carrier_vt_available_bool" value="true" />
+        <boolean name="carrier_allow_deflect_ims_call_bool" value="true" />
+        <boolean name="support_cdma_1x_voice_calls_bool" value="false" />
+        <boolean name="carrier_supports_ss_over_ut_bool" value="true" />
+        <boolean name="allow_emergency_numbers_in_call_log_bool" value="true" />
+        <boolean name="show_4g_for_lte_data_icon_bool" value="true" />
+        <boolean name="disable_dun_apn_while_roaming_with_preset_apn_bool" value="true" />
+        <string-array name="non_roaming_operator_string_array" num="3">
+            <item value="44050" />
+            <item value="44051" />
+            <item value="44054" />
+        </string-array>
+    </carrier_config>
+    <carrier_config mcc="440" mnc="51">
+        <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_volte_provisioned_bool" value="true" />
+        <boolean name="carrier_default_volte_switch_on_bool" value="true" />
+        <boolean name="enhanced_4g_lte_on_by_default_bool" value="true" />
+        <boolean name="editable_enhanced_4g_lte_bool" value="true" />
+        <boolean name="carrier_vt_available_bool" value="true" />
+        <boolean name="carrier_allow_deflect_ims_call_bool" value="true" />
+        <boolean name="support_cdma_1x_voice_calls_bool" value="false" />
+        <boolean name="carrier_supports_ss_over_ut_bool" value="true" />
+        <boolean name="allow_emergency_numbers_in_call_log_bool" value="true" />
+        <boolean name="show_4g_for_lte_data_icon_bool" value="true" />
+        <boolean name="disable_dun_apn_while_roaming_with_preset_apn_bool" value="true" />
+        <string-array name="non_roaming_operator_string_array" num="3">
+            <item value="44050" />
+            <item value="44051" />
+            <item value="44054" />
+        </string-array>
+    </carrier_config>
+    <carrier_config mcc="440" mnc="52">
+        <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_volte_provisioned_bool" value="true" />
+        <boolean name="carrier_default_volte_switch_on_bool" value="true" />
+        <boolean name="enhanced_4g_lte_on_by_default_bool" value="true" />
+        <boolean name="editable_enhanced_4g_lte_bool" value="true" />
+        <boolean name="carrier_allow_deflect_ims_call_bool" value="true" />
+        <boolean name="support_cdma_1x_voice_calls_bool" value="false" />
+        <boolean name="carrier_supports_ss_over_ut_bool" value="true" />
+        <boolean name="allow_emergency_numbers_in_call_log_bool" value="true" />
+        <boolean name="show_4g_for_lte_data_icon_bool" value="true" />
+        <boolean name="disable_dun_apn_while_roaming_with_preset_apn_bool" value="true" />
+        <string-array name="non_roaming_operator_string_array" num="3">
+            <item value="44050" />
+            <item value="44051" />
+            <item value="44054" />
+        </string-array>
+    </carrier_config>
+    <carrier_config mcc="440" mnc="53">
+        <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_volte_provisioned_bool" value="true" />
+        <boolean name="carrier_default_volte_switch_on_bool" value="true" />
+        <boolean name="enhanced_4g_lte_on_by_default_bool" value="true" />
+        <boolean name="editable_enhanced_4g_lte_bool" value="true" />
+        <boolean name="carrier_allow_deflect_ims_call_bool" value="true" />
+        <boolean name="support_cdma_1x_voice_calls_bool" value="false" />
+        <boolean name="carrier_supports_ss_over_ut_bool" value="true" />
+        <boolean name="allow_emergency_numbers_in_call_log_bool" value="true" />
+        <boolean name="show_4g_for_lte_data_icon_bool" value="true" />
+        <boolean name="disable_dun_apn_while_roaming_with_preset_apn_bool" value="true" />
+        <string-array name="non_roaming_operator_string_array" num="3">
+            <item value="44050" />
+            <item value="44051" />
+            <item value="44054" />
+        </string-array>
+    </carrier_config>
+    <carrier_config mcc="440" mnc="54">
+        <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_volte_provisioned_bool" value="true" />
+        <boolean name="carrier_default_volte_switch_on_bool" value="true" />
+        <boolean name="enhanced_4g_lte_on_by_default_bool" value="true" />
+        <boolean name="editable_enhanced_4g_lte_bool" value="true" />
+        <boolean name="carrier_allow_deflect_ims_call_bool" value="true" />
+        <boolean name="support_cdma_1x_voice_calls_bool" value="false" />
+        <boolean name="carrier_supports_ss_over_ut_bool" value="true" />
+        <boolean name="allow_emergency_numbers_in_call_log_bool" value="true" />
+        <boolean name="show_4g_for_lte_data_icon_bool" value="true" />
+        <boolean name="disable_dun_apn_while_roaming_with_preset_apn_bool" value="true" />
+        <string-array name="non_roaming_operator_string_array" num="3">
+            <item value="44050" />
+            <item value="44051" />
+            <item value="44054" />
+        </string-array>
+    </carrier_config>
+    <carrier_config mcc="510" mnc="09">
+        <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_vt_available_bool" value="true" />
+        <boolean name="carrier_wfc_ims_available_bool" value="true" />
+        <boolean name="carrier_default_volte_switch_on_bool" value="true" />
+        <boolean name="enhanced_4g_lte_on_by_default_bool" value="true" />
+        <boolean name="editable_enhanced_4g_lte_bool" value="true" />
+        <boolean name="hide_enhanced_4g_lte_bool" value="false" />
+        <boolean name="carrier_volte_provisioning_required_bool" value="false" />
+        <boolean name="carrier_volte_tty_supported_bool" value="false" />
+        <boolean name="show_4g_for_lte_data_icon_bool" value="true" />
+    </carrier_config>
+    <carrier_config mcc="510" mnc="28">
+        <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_vt_available_bool" value="true" />
+        <boolean name="carrier_wfc_ims_available_bool" value="true" />
+        <boolean name="carrier_default_volte_switch_on_bool" value="true" />
+        <boolean name="enhanced_4g_lte_on_by_default_bool" value="true" />
+        <boolean name="editable_enhanced_4g_lte_bool" value="true" />
+        <boolean name="hide_enhanced_4g_lte_bool" value="false" />
+        <boolean name="carrier_volte_provisioning_required_bool" value="false" />
+        <boolean name="carrier_volte_tty_supported_bool" value="false" />
+        <boolean name="show_4g_for_lte_data_icon_bool" value="true" />
+    </carrier_config>
 </carrier_config_list>

@@ -197,9 +197,7 @@ PRODUCT_PACKAGES += \
 # IMS
 PRODUCT_PACKAGES += \
     ims-ext-common \
-    ims_ext_common.xml \
-    ims_libimscamera_jni_symlink \
-    ims_libimsmedia_jni_symlink
+    ims_ext_common.xml
 
 # HWBinder
 PRODUCT_PACKAGES += \
@@ -360,6 +358,7 @@ PRODUCT_COPY_FILES += \
 # QCOM
 PRODUCT_PACKAGES += \
     libqti_vndfwk_detect \
+    libqti_vndfwk_detect.vendor \
     libvndfwk_detect_jni.qti \
     libvndfwk_detect_jni.qti.vendor
 
@@ -384,7 +383,8 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.deprecated@1.0.vendor \
     android.system.net.netd@1.1.vendor \
     librmnetctl \
-    libprotobuf-cpp-full
+    libprotobuf-cpp-full \
+    libprotobuf-cpp-full-3.9.1_deen
 
 # Recovery
 PRODUCT_COPY_FILES += \

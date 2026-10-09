@@ -6,15 +6,8 @@ install_symlink {
 }
 
 install_symlink {
-    name: "ims_libimscamera_jni_symlink",
-    product_specific: true,
-    installed_location: "priv-app/ims/lib/arm64/libimscamera_jni.so",
-    symlink_target: "/system/product/lib64/libimscamera_jni.so",
-}
-
-install_symlink {
-    name: "ims_libimsmedia_jni_symlink",
-    product_specific: true,
-    installed_location: "priv-app/ims/lib/arm64/libimsmedia_jni.so",
-    symlink_target: "/system/product/lib64/libimsmedia_jni.so",
+    name: "deen_cne_libvndfwk_detect_jni_symlink",
+    vendor: true,
+    installed_location: "app/CneApp/lib/arm64/libvndfwk_detect_jni.qti.so",
+    symlink_target: "/vendor/lib64/libvndfwk_detect_jni.qti.so",
 }

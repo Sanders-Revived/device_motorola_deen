@@ -11,8 +11,9 @@ import extract_utils.tools
 extract_utils.tools.DEFAULT_PATCHELF_VERSION = '0_9'
 
 from extract_utils.elf import file_needs_lib
+from extract_utils.fixups import flatten_fixups
 from extract_utils.fixups_blob import blob_fixup, blob_fixups_user_type
-from extract_utils.fixups_lib import lib_fixups
+from extract_utils.fixups_lib import lib_fixups as base_lib_fixups
 from extract_utils.main import ExtractUtils, ExtractUtilsModule
 from extract_utils.postprocess import PostprocessCtx
 from extract_utils.tools import patchelf_version_path_map
@@ -25,6 +26,17 @@ namespace_imports = [
     'hardware/qcom-caf/wlan',
     'vendor/qcom/opensource/dataservices',
 ]
+
+
+def lib_fixup_proto_3_9_1(lib: str, partition: str) -> str:
+    return f'{lib}_deen' if partition == 'vendor' else lib
+
+
+lib_fixups = {
+    **flatten_fixups(base_lib_fixups),
+    'libprotobuf-cpp-full-3.9.1': lib_fixup_proto_3_9_1,
+}
+
 
 blob_fixups: blob_fixups_user_type = {
     'vendor/lib/hw/audio.primary.msm8953.so': blob_fixup()
