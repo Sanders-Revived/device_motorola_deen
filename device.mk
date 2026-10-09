@@ -128,9 +128,12 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-impl \
     android.hardware.graphics.allocator@2.0-impl:64 \
     android.hardware.graphics.allocator@2.0-service \
+    android.hardware.graphics.allocator@3.0-impl \
+    android.hardware.graphics.allocator@4.0-impl \
     android.hardware.graphics.common@1.1.vendor \
     android.hardware.graphics.composer@2.1-service \
     android.hardware.graphics.mapper@2.0-impl-2.1 \
+    gralloc.msm8953 \
     hwcomposer.qcom \
     libdisplayconfig \
     libqdMetaData.system \
@@ -268,14 +271,11 @@ PRODUCT_PACKAGES += \
     netutils-wrapper-1.0
 
 # NFC and Secure Element packages
-# Android 15 uses the NFC mainline apex; remove the legacy platform app
-# selected by the release flag and keep the apex package enabled.
-PRODUCT_PACKAGES -= NfcNci
-PRODUCT_PACKAGES += com.android.nfcservices
 PRODUCT_PACKAGES += \
     android.hardware.nfc@1.1-service \
     android.hardware.secure_element@1.1-service-disabled \
     com.android.nfc_extras \
+    NfcNci \
     Tag \
     SecureElement
 
