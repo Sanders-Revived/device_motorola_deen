@@ -268,6 +268,10 @@ PRODUCT_PACKAGES += \
     netutils-wrapper-1.0
 
 # NFC and Secure Element packages
+# The deen has no UWB/ranging hardware and this optional module is not present
+# in the current Android 15 source checkout.
+PRODUCT_PACKAGES -= com.android.ranging
+
 PRODUCT_PACKAGES += \
     android.hardware.nfc@1.1-service \
     android.hardware.secure_element@1.1-service-disabled \
