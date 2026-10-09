@@ -131,6 +131,7 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.common@1.1.vendor \
     android.hardware.graphics.composer@2.1-service \
     android.hardware.graphics.mapper@2.0-impl-2.1 \
+    gralloc.msm8953 \
     hwcomposer.qcom \
     libdisplayconfig \
     libqdMetaData.system \
@@ -268,9 +269,8 @@ PRODUCT_PACKAGES += \
     netutils-wrapper-1.0
 
 # NFC and Secure Element packages
-# The deen has no UWB/ranging hardware and this optional module is not present
-# in the current Android 15 source checkout.
-PRODUCT_PACKAGES -= com.android.ranging
+# The current Android 15 checkout has no UWB/ranging module for this target.
+PRODUCT_ENFORCE_PACKAGES_EXIST_ALLOW_LIST += com.android.ranging
 
 PRODUCT_PACKAGES += \
     android.hardware.nfc@1.1-service \
