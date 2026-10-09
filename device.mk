@@ -81,7 +81,6 @@ PRODUCT_PACKAGES += \
     audio.bluetooth.default \
     vendor.qti.hardware.btconfigstore@1.0.vendor \
     vendor.qti.hardware.btconfigstore@2.0.vendor \
-    vendor.qti.hardware.fm@1.0.vendor
 
 # Boot animation
 TARGET_BOOT_ANIMATION_RES := 1080
@@ -104,9 +103,7 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-service \
     android.hardware.camera.provider@2.5 \
     camera.device@3.2-impl \
-    libbson.vendor \
     libxml2 \
-    libwui \
     vendor.qti.hardware.camera.device@1.0:64
 # Cgroup and task_profiles
 PRODUCT_COPY_FILES += \
@@ -131,12 +128,9 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-impl \
     android.hardware.graphics.allocator@2.0-impl:64 \
     android.hardware.graphics.allocator@2.0-service \
-    android.hardware.graphics.allocator@3.0-impl \
-    android.hardware.graphics.allocator@4.0-impl \
     android.hardware.graphics.common@1.1.vendor \
     android.hardware.graphics.composer@2.1-service \
     android.hardware.graphics.mapper@2.0-impl-2.1 \
-    gralloc.msm8953 \
     hwcomposer.qcom \
     libdisplayconfig \
     libqdMetaData.system \
@@ -274,11 +268,14 @@ PRODUCT_PACKAGES += \
     netutils-wrapper-1.0
 
 # NFC and Secure Element packages
+# Android 15 uses the NFC mainline apex; remove the legacy platform app
+# selected by the release flag and keep the apex package enabled.
+PRODUCT_PACKAGES -= NfcNci
+PRODUCT_PACKAGES += com.android.nfcservices
 PRODUCT_PACKAGES += \
     android.hardware.nfc@1.1-service \
     android.hardware.secure_element@1.1-service-disabled \
     com.android.nfc_extras \
-    NfcNci \
     Tag \
     SecureElement
 
@@ -384,7 +381,6 @@ PRODUCT_PACKAGES += \
     android.system.net.netd@1.1.vendor \
     librmnetctl \
     libprotobuf-cpp-full \
-    libprotobuf-cpp-full-3.9.1_deen
 
 # Recovery
 PRODUCT_COPY_FILES += \
@@ -414,7 +410,11 @@ PRODUCT_PACKAGES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
-    hardware/motorola
+    hardware/motorola \
+    hardware/qcom-caf/msm8996/display \
+    hardware/qcom-caf/msm8996/media/libc2dcolorconvert \
+    hardware/qcom-caf/msm8996/media/mm-video-v4l2/vidc/vdec \
+    hardware/qcom-caf/msm8996/media/mm-video-v4l2/vidc/venc
 
 # Speed profile services and wifi-service to reduce RAM and storage
 PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
@@ -460,10 +460,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libtinyxml2
 
-# Trust HAL
-PRODUCT_PACKAGES += \
-    vendor.lineage.trust@1.0-service
-
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service
@@ -479,12 +475,7 @@ PRODUCT_COPY_FILES += \
 # Update this list with what each blob is actually for
 # libstdc++: camera.msm8953
 PRODUCT_PACKAGES += \
-    libstdc++.vendor \
     libgui_vendor
-
-PRODUCT_COPY_FILES += \
-    prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-core/libprotobuf-cpp-full.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libprotobuf-cpp-full-v29.so \
-    prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-core/libprotobuf-cpp-lite.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libprotobuf-cpp-lite-v29.so
 
 PRODUCT_EXTRA_VNDK_VERSIONS := 30
 
