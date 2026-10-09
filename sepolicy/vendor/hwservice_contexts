@@ -1,3 +1,4 @@
 vendor.egistec.hardware.fingerprint::IBiometricsFingerprintEts		u:object_r:egis_fingerprint_hwservice:s0
 motorola.hardware.audio.adspd::IADSP                                              u:object_r:hal_audio_hwservice:s0
 android.frameworks.sensorservice::ISensorManager                                  u:object_r:fwk_sensor_hwservice:s0
+vendor.qti.hardware.slmadapter::ISlmAdapter                                      u:object_r:vendor_hal_slmadapter_hwservice:s0

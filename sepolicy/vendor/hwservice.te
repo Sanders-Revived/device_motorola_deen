@@ -2,3 +2,6 @@ type egis_fingerprint_hwservice, hwservice_manager_type;
 
 type nxpese_hwservice, hwservice_manager_type;
 type nxpnfc_hwservice, hwservice_manager_type;
+
+# CNE's SLM adapter is provided by the updated radio stack.
+type vendor_hal_slmadapter_hwservice, hwservice_manager_type, protected_hwservice;
