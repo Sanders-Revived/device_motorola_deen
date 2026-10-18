@@ -104,7 +104,11 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-service \
     android.hardware.camera.provider@2.5 \
     camera.device@3.2-impl \
+    camera.msm8953 \
     libbson.vendor \
+    libmmcamera_interface \
+    libmmjpeg_interface \
+    libqomx_core \
     libxml2 \
     libwui \
     vendor.qti.hardware.camera.device@1.0:64
@@ -477,7 +481,7 @@ PRODUCT_COPY_FILES += \
 
 # VNDK
 # Update this list with what each blob is actually for
-# libstdc++: camera.msm8953
+# libicuuc: vendor.qti.hardware.qteeconnector@1.0-impl
 PRODUCT_PACKAGES += \
     libstdc++_vendor \
     libgui_vendor

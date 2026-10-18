@@ -98,7 +98,6 @@ system_ext/lib64/com.qualcomm.qti.ant@1.0.so|7fffcdca309796183708d9e345d3cd97461
 vendor/lib64/hw/com.dsi.ant@1.0-impl.so;DISABLE_CHECKELF;DISABLE_DEPS|b5c57fdf48447c68b6308fdcb167d0d21b5c56ed
 
 # Camera
-vendor/lib/hw/camera.msm8953.so
 vendor/lib/lib_motsensorlistener.so
 vendor/lib/lib_mot_app6_metadata.so
 vendor/lib/lib_mot_led_calibration.so
@@ -115,14 +114,11 @@ vendor/lib/libjpegehw.so
 vendor/lib/libmotocalibration.so
 vendor/lib/libmot_afd.so
 vendor/lib/libmot_lux_standardization.so
-vendor/lib/libmm-qcamera.so
 vendor/lib/libmmjpeg.so
-vendor/lib/libmmjpeg_interface.so
 vendor/lib/libmmqjpegdma.so
 vendor/lib/libmmqjpeg_codec.so
 vendor/lib/libmot_gpu_mapper.so|9f4d96542314976a8384f686a2a4c49d321999fe
 vendor/lib/liboptizoom.so
-vendor/lib/libqomx_core.so
 vendor/lib/libqomx_jpegdec.so
 vendor/lib/libqomx_jpegenc.so
 vendor/lib/libqomx_jpegenc_pipe.so
@@ -314,7 +310,6 @@ vendor/lib/libmmcamera_gc2375.so
 vendor/lib/libmmcamera_gc2375h_eeprom.so
 vendor/lib/libmmcamera_hdr_gb_lib.so
 vendor/lib/libmmcamera_imglib.so
-vendor/lib/libmmcamera_interface.so
 vendor/lib/libmmcamera_isp_abf40.so
 vendor/lib/libmmcamera_isp_bcc40.so
 vendor/lib/libmmcamera_isp_be_stats44.so
