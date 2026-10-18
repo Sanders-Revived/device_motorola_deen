@@ -66,7 +66,9 @@ PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml
 
 # Add common definitions for Qualcomm
- $(call inherit-product, hardware/qcom-caf/common/common.mk)
+$(call inherit-product, hardware/qcom-caf/common/common.mk)
+
+$(call inherit-product-if-exists, hardware/mithorium/mithorium_qcom_hals.mk)
 
 TARGET_EXCLUDES_AUDIOFX := true
 
@@ -131,22 +133,12 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
 
 # Display
 PRODUCT_PACKAGES += \
-    android.frameworks.displayservice@1.0.vendor \
-    android.hardware.graphics.allocator@2.0-impl \
     android.hardware.graphics.allocator@2.0-impl:64 \
     android.hardware.graphics.allocator@2.0-service \
-    android.hardware.graphics.allocator@3.0-impl \
-    android.hardware.graphics.allocator@4.0-impl \
-    android.hardware.graphics.common@1.1.vendor \
     android.hardware.graphics.composer@2.1-service \
     android.hardware.graphics.mapper@2.0-impl-2.1 \
     gralloc.msm8953 \
-    hwcomposer.qcom \
-    libdisplayconfig \
-    libqdMetaData.system \
-    libvulkan \
-    libtinyxml \
-    vendor.display.config@1.9 \
+    hwcomposer.msm8953 \
     vendor.qti.hardware.memtrack-service
 
 # DRM
@@ -409,6 +401,7 @@ PRODUCT_COPY_FILES += \
 
 # Shims
 PRODUCT_PACKAGES += \
+    libgralloc1_shim \
     libgui_shim \
     libgui_shim_vendor \
     libcutils_shim \

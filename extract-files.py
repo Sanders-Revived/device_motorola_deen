@@ -12,7 +12,11 @@ extract_utils.tools.DEFAULT_PATCHELF_VERSION = '0_9'
 
 from extract_utils.elf import file_needs_lib
 from extract_utils.fixups_blob import blob_fixup, blob_fixups_user_type
-from extract_utils.fixups_lib import lib_fixups
+from extract_utils.fixups_lib import (
+    lib_fixup_remove,
+    lib_fixups,
+    lib_fixups_user_type,
+)
 from extract_utils.main import ExtractUtils, ExtractUtilsModule
 from extract_utils.postprocess import PostprocessCtx
 from extract_utils.tools import patchelf_version_path_map
@@ -21,10 +25,17 @@ from extract_utils.utils import run_cmd
 namespace_imports = [
     'device/motorola/deen',
     'hardware/motorola',
-    'hardware/qcom-caf/msm8996',
+    'hardware/qcom-caf/msm8953',
     'hardware/qcom-caf/wlan',
     'vendor/qcom/opensource/dataservices',
+    'vendor/qcom/opensource/commonsys/display',
+    'vendor/qcom/opensource/display',
 ]
+
+lib_fixups: lib_fixups_user_type = {
+    **lib_fixups,
+    'libgralloc1_shim': lib_fixup_remove,
+}
 
 blob_fixups: blob_fixups_user_type = {
     'vendor/lib/hw/audio.primary.msm8953.so': blob_fixup()
@@ -42,6 +53,8 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libcutils_shim.so'),
     'vendor/bin/charge_only_mode': blob_fixup()
         .add_needed('libmemset_shim.so'),
+    'vendor/lib/libgralloc1.so': blob_fixup()
+        .replace_needed('libgrallocutils.so', 'libgralloc1_shim.so'),
 }  # fmt: skip
 
 
