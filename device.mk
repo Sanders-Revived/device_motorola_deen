@@ -220,7 +220,6 @@ PRODUCT_PACKAGES += \
     init.mmi.chipset.rc \
     init.mmi.overlay.rc \
     init.mmi.rc \
-    init.mmi.usb.rc \
     init.qcom.rc \
     init.target.rc \
     ueventd.qcom.rc
@@ -384,8 +383,7 @@ PRODUCT_PACKAGES += \
 
 # Recovery
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/root/init.recovery.qcom.rc:root/init.recovery.qcom.rc \
-    $(LOCAL_PATH)/rootdir/etc/init.mmi.usb.rc:root/init.recovery.qcom.usb.rc
+    $(LOCAL_PATH)/rootdir/root/init.recovery.qcom.rc:root/init.recovery.qcom.rc
 
 TARGET_RECOVERY_DENSITY := xhdpi
 
@@ -457,13 +455,13 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libtinyxml2
 
-# Trust HAL
-PRODUCT_PACKAGES += \
-    vendor.lineage.trust@1.0-service
-
 # USB
 PRODUCT_PACKAGES += \
-    android.hardware.usb@1.0-service
+    android.hardware.usb@1.0-service \
+    init.qcom.usb.rc \
+    init.qcom.usb.sh
+
+PRODUCT_SOONG_NAMESPACES += vendor/qcom/opensource/usb/etc
 
 # Vibrator
 PRODUCT_PACKAGES += \

@@ -1,4 +1,5 @@
-import /init.mmi.usb.rc
+on init
+    setprop sys.usb.configfs 1
 
 on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
