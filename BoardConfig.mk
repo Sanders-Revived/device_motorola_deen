@@ -122,6 +122,7 @@ BOARD_KERNEL_BASE := 0x80000000
 
 BOARD_KERNEL_CMDLINE += \
     androidboot.bootdevice=7824900.sdhci \
+    androidboot.boot_devices=soc/7824900.sdhci \
     androidboot.hardware=qcom \
     androidboot.usbconfigfs=true \
     androidboot.selinux=permissive \
