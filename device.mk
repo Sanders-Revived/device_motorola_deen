@@ -83,7 +83,7 @@ PRODUCT_PACKAGES += \
     audio.bluetooth.default \
     vendor.qti.hardware.btconfigstore@1.0.vendor \
     vendor.qti.hardware.btconfigstore@2.0.vendor \
-    vendor.qti.hardware.fm@1.0.vendor
+    vendor.qti.hardware.fm@1.0
 
 # Boot animation
 TARGET_BOOT_ANIMATION_RES := 1080
@@ -107,12 +107,10 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.5 \
     camera.device@3.2-impl \
     camera.msm8953 \
-    libbson.vendor \
     libmmcamera_interface \
     libmmjpeg_interface \
     libqomx_core \
     libxml2 \
-    libwui \
     vendor.qti.hardware.camera.device@1.0:64
 # Cgroup and task_profiles
 PRODUCT_COPY_FILES += \
@@ -275,7 +273,6 @@ PRODUCT_PACKAGES += \
     android.hardware.nfc@1.1-service \
     android.hardware.secure_element@1.1-service-disabled \
     com.android.nfc_extras \
-    NfcNci \
     Tag \
     SecureElement
 
@@ -478,8 +475,8 @@ PRODUCT_PACKAGES += \
     libgui_vendor
 
 PRODUCT_COPY_FILES += \
-    prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-core/libprotobuf-cpp-full.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libprotobuf-cpp-full-v29.so \
-    prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-core/libprotobuf-cpp-lite.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libprotobuf-cpp-lite-v29.so
+    hardware/lineage/compat/vndk/v29/arm64/libprotobuf-cpp-full.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libprotobuf-cpp-full-v29.so \
+    hardware/lineage/compat/vndk/v29/arm64/libprotobuf-cpp-lite.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libprotobuf-cpp-lite-v29.so
 
 PRODUCT_EXTRA_VNDK_VERSIONS := 30
 
